@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			<script>
+				inc = 0;
+				$(document).ready(function(){
+    				$("input").keydown(function(){
+        			$("#span1").text(inc += 1);
+    		});
+		});
+		</script>
+	</head>
+	<body style="backgound-color:grey;">
+		<h2>Assignment on:
+			<span style="color:purple;font-size:15px;">
+				Create a page with 2 text field , In 1st filed when key is pressed then in 2nd text filed its shows the count of total hits of key press.
+			</span>
+		</h2>
+			<input type="text" placeholder="Type your name here">
+
+			<p>Total Keypresses: <span id="span1">0</span></p>
+
+	</body>
+</html>

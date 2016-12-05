@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+			p{
+				font-size: 20px;
+				color: blue;
+				float: left;				
+			}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+    		$("p").hover(function(){
+        		$(this).css("background-color", "red");
+        	});
+		});
+	</script>
+</head>
+	<body style="backgound-color:grey;">
+		<h2>Assignment on:
+			<span style="color:purple;font-size:15px;">
+				Write the text and change its color on mouse drag with the help of hover
+			</span>
+		</h2>	
+		<h4>Hover your mouse on the Text below:</h4>
+		<p>Tudip Technologies</p>
+
+	</body>
+</html>
