@@ -1,0 +1,65 @@
+<html>
+		<head>
+			<script>
+				var likes;
+
+				function like()
+				{
+					likes=parseInt(localStorage.getItem("like"));
+
+						if (typeof(Storage) !== "undefined") {
+				// Store
+						likes=likes+1;
+						document.getElementById("span_like").innerHTML =likes;
+				// localStorage.setItem("like", count);
+						localStorage.like=likes;
+
+						}
+						else {
+						document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+					}
+
+				}
+
+				function Dislike()
+				{
+					count=parseInt(localStorage.getItem("unlike"));
+
+						if (typeof(Storage) !== "undefined") {
+				// Store
+						count=count+1;
+						document.getElementById("span_dislike").innerHTML =count;
+						localStorage.setItem("unlike", count);
+				// Retrieve
+
+						} 
+						else {
+						document.getElementById("span_dislike").innerHTML = "Sorry, your browser does not support Web Storage...";
+					}
+
+				}
+			</script>
+		</head>
+
+<body style="background:grey;">
+		<div id="container" style="width:50%;margin:auto;">	
+			<h2>Assignment on:
+				<span style="color:purple;font-size:15px;">Create a page having 1 image with 2 buttons (Like and Dislike), then count the total likes and dislikes (count complete likes and dislikes, without database )
+				</span> 
+			</h2>
+			<div class="image">
+				<img src="sukhoi.jpg" width="650px" height="400px" alt="Sukhoi Image">
+			</div>
+			<div class="button">
+
+				<button id="like" onclick="like()"><img src=""> Like</button>
+				<span id="span_like" ></span>
+
+					<span style="margin-left:430px;"> 
+					<button id="dislike1" onclick="Dislike()">Dislike</button>
+					<span id="span_dislike"/>
+					</span>
+			</div>
+		</div>	
+</body>
+</html>
